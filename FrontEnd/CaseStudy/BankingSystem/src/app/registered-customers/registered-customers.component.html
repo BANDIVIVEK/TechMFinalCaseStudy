@@ -1,0 +1,28 @@
+<app-home></app-home>
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Date of Birth</th>
+        <th>Address</th>
+        <th>Phone Number</th>
+        <th>SSN</th>
+        <th>Occupation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cust of customers">
+        <td>{{ cust.firstName }}</td>
+        <td>{{ cust.lastName }}</td>
+        <td>{{ cust.email }}</td>
+        <td>{{ cust.dateOfBirth }}</td>
+        <td>{{ cust.address}}</td>
+        <td>{{ cust.phoneNumber }}</td>
+        <td>{{ cust.ssn }}</td>
+        <td>{{ cust.occupation }}</td>
+      </tr>
+    </tbody>
+  </table>
+  

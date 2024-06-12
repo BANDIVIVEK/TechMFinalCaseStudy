@@ -1,0 +1,60 @@
+<div class="container">
+  <h1>Customer Registration</h1>
+    <form (ngSubmit)="onSubmit(customerForm.value)" #customerForm="ngForm">
+    <div>
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" required [(ngModel)]="customer.firstName" name="firstName" #firstName="ngModel">
+      <div *ngIf="firstName.invalid && firstName.touched">First Name is required</div>
+    </div>
+  
+    <div>
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" required [(ngModel)]="customer.lastName" name="lastName" #lastName="ngModel">
+      <div *ngIf="lastName.invalid && lastName.touched">Last Name is required</div>
+    </div>
+  
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" required [(ngModel)]="customer.email" name="email" #email="ngModel">
+      <div *ngIf="email.invalid && email.touched">Valid Email is required</div>
+    </div>
+  
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" required [(ngModel)]="customer.password" name="password" #password="ngModel">
+      <div *ngIf="password.invalid && password.touched">Password is required</div>
+    </div>
+  
+    <div>
+      <label for="dateOfBirth">Date of Birth:</label>
+      <input type="date" id="dateOfBirth" required [(ngModel)]="customer.dateOfBirth" name="dateOfBirth" #dateOfBirth="ngModel">
+      <div *ngIf="dateOfBirth.invalid && dateOfBirth.touched">Date of Birth is required</div>
+    </div>
+  
+    <div>
+      <label for="address">Address:</label>
+      <input type="text" id="address" required [(ngModel)]="customer.address" name="address" #address="ngModel">
+      <div *ngIf="address.invalid && address.touched">Address is required</div>
+    </div>
+  
+    <div>
+      <label for="phoneNumber">Phone Number:</label>
+      <input type="tel" id="phoneNumber" required [(ngModel)]="customer.phoneNumber" name="phoneNumber" #phoneNumber="ngModel">
+      <div *ngIf="phoneNumber.invalid && phoneNumber.touched">Phone Number is required</div>
+    </div>
+  
+    <div>
+      <label for="ssn">Social Security Number (SSN):</label>
+      <input type="text" id="ssn" required [(ngModel)]="customer.ssn" name="ssn" #ssn="ngModel">
+      <div *ngIf="ssn.invalid && ssn.touched">SSN is required</div>
+    </div>
+  
+    <div>
+      <label for="occupation">Occupation:</label>
+      <input type="text" id="occupation" required [(ngModel)]="customer.occupation" name="occupation" #occupation="ngModel">
+      <div *ngIf="occupation.invalid && occupation.touched">Occupation is required</div>
+    </div>
+  
+    <button type="submit" [disabled]="customerForm.invalid">Register</button>
+  </form>
+</div>

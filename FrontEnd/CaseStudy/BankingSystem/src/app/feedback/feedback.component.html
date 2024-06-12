@@ -1,0 +1,21 @@
+<app-index></app-index>
+<div align="center">
+    <h2>Customer Feedback</h2></div>
+    <div>
+    <form (ngSubmit)="submitFeedback()" #feedbackForm="ngForm">
+      <label for="customerId">Customer ID:</label>
+      <input type="number" id="customerId" [(ngModel)]="feedback.customerId" name="customerId" required>
+  
+      <label for="feedbackText">Comments:</label>
+      <input type="text" id="feedbackText" [(ngModel)]="feedback.feedbackText" name="feedbackText" required>
+  
+      <label for="rating">Rating:</label>
+      <input type="number" id="rating" [(ngModel)]="feedback.rating" name="rating" required min="1" max="5">
+
+      <label for="date">Date:</label>
+      <input type="date" id="date" [(ngModel)]="feedback.date" name="date" required>
+  
+      <button type="submit" >Submit Feedback</button>
+    </form>
+
+  </div>

@@ -1,0 +1,25 @@
+<app-home></app-home>
+<table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Account Type</th>
+          <th>Account Number</th>
+          <th>Customer ID</th>
+          <th>Balance</th>
+          <th>Interest Rate</th>
+          <th>Opening Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let account of accounts">
+          <td>{{ account.accountType }}</td>
+          <td>{{ account.accountNumber }}</td>
+          <td>{{ account.customerId }}</td>
+          <td>{{ account.balance }}</td>
+          <td>{{ account.interestRate }}</td>
+          <td>{{ account.openingDate }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  

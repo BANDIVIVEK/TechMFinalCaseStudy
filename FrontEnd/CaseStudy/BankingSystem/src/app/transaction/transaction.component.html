@@ -1,0 +1,39 @@
+<app-index></app-index>
+<div align="center">
+  <h1>Transaction Management</h1></div>
+<form (ngSubmit)="onSubmit(transactionForm.value)" #transactionForm="ngForm">
+    <div>
+      <label for="accountNumber">Account ID:</label>
+      <input type="text" id="accountNumber" required [(ngModel)]="transaction.accountNumber" name="accountNumber" #accountNumber="ngModel">
+      <div *ngIf="accountNumber.invalid && accountNumber.touched">Account Number is required</div>
+    </div>
+  
+    <div>
+      <label for="transactionType">Transaction Type:</label>
+      <select id="transactionType" required [(ngModel)]="transaction.transactionType" name="transactionType" #transactionType="ngModel">
+        <option value="Deposit">Deposit</option>
+        <option value="Withdrawal">Withdrawal</option>
+        <option value="Transfer">Transfer</option>
+      </select>
+      <div *ngIf="transactionType.invalid && transactionType.touched">Transaction Type is required</div>
+    </div>
+  
+    <div>
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" required [(ngModel)]="transaction.amount" name="amount" #amount="ngModel">
+      <div *ngIf="amount.invalid && amount.touched">Amount is required</div>
+    </div>
+
+    <div>
+      <label for="date">Date:</label>
+      <input type="date" id="Date" required [(ngModel)]="transaction.date" name="date" #date="ngModel">
+      <div *ngIf="date.invalid && date.touched">Date is required</div>
+    </div>
+  
+    <div>
+      <label for="description">Description:</label>
+      <input type="text" id="description" [(ngModel)]="transaction.description" name="description">
+    </div>
+  
+    <button type="submit" [disabled]="transactionForm.invalid">Submit</button>
+  </form>

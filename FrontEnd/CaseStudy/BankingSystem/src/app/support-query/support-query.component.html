@@ -1,0 +1,18 @@
+<app-index></app-index>
+<div align="center">
+    <div>
+      <h2>Customer Support</h2>
+      <h3>Submit a Query</h3>
+      <form (ngSubmit)="submitQuery()" #queryForm="ngForm">
+        <label for="customerId">Customer ID:</label>
+        <input type="text" id="customerId" [(ngModel)]="newQuery.customerId" name="customerId" required><br>
+        <br>
+        <label for="query">Query:</label>
+        <textarea id="query" [(ngModel)]="newQuery.query" name="query" required></textarea><br>
+        <br> 
+        <button type="submit" [disabled]="queryForm.invalid">Submit Query</button>
+      </form>
+    </div>
+  
+    
+  

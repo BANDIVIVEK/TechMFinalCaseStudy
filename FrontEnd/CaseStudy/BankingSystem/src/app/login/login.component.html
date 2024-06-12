@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>Login</h1>
+    <form (ngSubmit)="onSubmit()">
+      <label for="email"><b>Email</b></label>
+      <input type="text" class="form-control" name="email" [(ngModel)]="email" required>
+  
+      <label for="password"><b>Password</b></label>
+      <input type="password" class="form-control" name="password" [(ngModel)]="password" required>
+  
+      <p>New User? <a href="http://localhost:4200/customer" style="color:rgb(255, 30, 30)">Register</a>.</p>
+  
+      <div class="clearfix">
+        <button type="submit" class="btn">Login</button>
+      </div>
+    </form>
+  </div>
